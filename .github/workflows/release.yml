@@ -22,4 +22,7 @@ jobs:
         uses: sliit-foss/actions/bun/setup@v1.1
 
       - name: Deploy 🚀
-        run: GIT_USER=akalanka47000 bun run deploy
+        run: |
+            git config --global user.email "akalankaperera128@gmail.com"
+            git config --global user.name "Akalanka Perera"
+            GIT_USER=akalanka47000 bun run deploy
