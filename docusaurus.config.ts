@@ -12,7 +12,7 @@ const config: Config = {
   baseUrl: '/',
 
   organizationName: 'elcengine', 
-  projectName: 'elemental',
+  projectName: 'elcengine.github.io',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
