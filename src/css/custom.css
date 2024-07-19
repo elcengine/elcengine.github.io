@@ -50,3 +50,7 @@ html:before {
   z-index: -999;
   background-color: black;
 }
+
+#__docusaurus {
+  background-color: white;
+}
