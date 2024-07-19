@@ -84,5 +84,5 @@ e_connection.Disconnect()
 - Or disconnect from multiple connections
 
 ```go
-e_connection.Disconnect("default","my-connection", "some-other-connection")
+e_connection.Disconnect("default", "my-connection", "some-other-connection")
 ```
