@@ -22,6 +22,20 @@ e_connection.On("ConnectionCreated", func(alias string) {
 }, "my-connection")
 ```
 
+## Unsubscribe from Connection Events
+
+- Unsubscribes from the `ConnectionCreated` event of the default connection
+
+```go
+e_connection.Off("ConnectionCreated")
+```
+
+- Unsubscribes from the `ConnectionCreated` event of a specific connection
+
+```go
+e_connection.Off("ConnectionCreated", "my-connection")
+```
+
 **For a full list of supported events, refer [this page](https://pkg.go.dev/go.mongodb.org/mongo-driver/event).**
 
 ## Override the default Elemental pool monitor
