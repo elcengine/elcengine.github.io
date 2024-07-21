@@ -24,7 +24,7 @@ type Witcher struct {
 	CreatedAt  time.Time          `json:"created_at" bson:"created_at"`
 	UpdatedAt  time.Time          `json:"updated_at" bson:"updated_at"`
 }
-Witcher := elemental.NewModel[Witcher]("Witcher", schema)
+WitcherModel := elemental.NewModel[Witcher]("Witcher", schema)
 ```
 
 ## Using a Model
@@ -34,7 +34,7 @@ Once you have defined a model, you can use it to interact with your MongoDB coll
 ### Insert a Document
 
 ```go
-witcher := Witcher.Create(Witcher{
+witcher := WitcherModel.Create(Witcher{
 	Name:       "Geralt of Rivia",
 	Age:        100,
 	Occupation: "Witcher",
@@ -51,7 +51,7 @@ fmt.Println(witcher.UpdatedAt) // The timestamp when the document was last updat
 ### Find Documents
 
 ```go
-witchers := Witcher.Find().Exec().([]Witcher)
+witchers := WitcherModel.Find().Exec().([]Witcher)
 
 for _, witcher := range witchers {
 	fmt.Println(witcher.Name) // The name of each document
@@ -61,7 +61,7 @@ for _, witcher := range witchers {
 ### Find a Document
 
 ```go
-witcher := Witcher.FindOne(Witcher{
+witcher := WitcherModel.FindOne(Witcher{
 	Name: "Geralt of Rivia",
 }).Exec().(*Witcher)
 
@@ -71,11 +71,11 @@ fmt.Println(witcher.ID) // The ObjectID of the found document
 ### Update a Document
 
 ```go
-witcher := Witcher.FindOne(Witcher{
+witcher := WitcherModel.FindOne(Witcher{
 	Name: "Geralt of Rivia",
 }).Exec().(*Witcher)
 
-updatedWitcher := Witcher.UpdateByID(witcher.ID, Witcher{
+updatedWitcher := WitcherModel.UpdateByID(witcher.ID, Witcher{
 	Name: "White Wolf",
 }).Exec().(*Witcher)
 
@@ -85,11 +85,11 @@ fmt.Println(updatedWitcher.Name) // The updated name of the document as White Wo
 ### Delete a Document
 
 ```go
-witcher := Witcher.Find(Witcher{
+witcher := WitcherModel.Find(Witcher{
 	Name: "White Wolf",
 }).Exec().(*Witcher)
 
-Witcher.DeleteByID(witcher.ID).Exec()
+WitcherModel.DeleteByID(witcher.ID).Exec()
 ```
 
-**Note:** The above examples are just a few of the many operations you can perform with a model. For a complete list of operations, refer to each of their individual sections in the sidebar.
+**Note:** The above examples are just a few of the many operations you can perform with a model. For a complete list of operations, refer to each of their individual sections under **[Queries](/docs/queries).**

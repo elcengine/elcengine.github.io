@@ -10,14 +10,14 @@ Elemental is heavily inspired by the popular **Mongoose** library for **Node.js*
 
 With Elemental, you can:
 
-- **Define an intuitive schema** for your MongoDB documents.
-
-- **Construct a Model** from your schema to interact with your MongoDB collection.
+- **Define an intuitive Schema and from it, a Model** for your MongoDB documents.
 
 - **Define and run complex queries** using the Querybuilder API.
 
-- **Inject middleware** to run custom logic before or after certain operations.
+- **Inject middleware and utilize plugins** to extend the functionality of your models.
 
-- **And much more!**
+- **Interact with multiple data sources** with ease.
+
+- **And so much more!**
 
 For a full list of features, have a good look though the side panel. If you have any questions or need help, feel free to open an issue on the **[Elemental GitHub repository](https://github.com/elcengine/elemental/issues)**.
