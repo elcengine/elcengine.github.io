@@ -92,4 +92,4 @@ witcher := WitcherModel.Find(Witcher{
 WitcherModel.DeleteByID(witcher.ID).Exec()
 ```
 
-**Note:** The above examples are just a few of the many operations you can perform with a model. For a complete list of operations, refer to each of their individual sections under **[Basic Queries](/docs/queries) and [Querybuilder](/docs/querybuilder)**.
+**Note:** The above examples are just a few of the many operations you can perform with a model. For a complete list of operations, refer to each of their individual sections under **[Basic Queries](/docs/category/queries) and [Querybuilder](/docs/category/querybuilder)**.
