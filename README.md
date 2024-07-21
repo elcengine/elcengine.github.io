@@ -1,17 +1,17 @@
-# Website
+# Elemental Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+The Elemental documentation is a collection of guides and tutorials to help you get started with Elemental. If you have any questions or need help, feel free to open an issue on the [Elemental GitHub repository](https://github.com/elcengine/elemental/issues).
 
 ### Installation
 
 ```
-$ yarn
+$ bun install
 ```
 
 ### Local Development
 
 ```
-$ yarn start
+$ bun start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -19,23 +19,11 @@ This command starts a local development server and opens up a browser window. Mo
 ### Build
 
 ```
-$ yarn build
+$ bun run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ### Deployment
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Deployment is done automatically by GitHub Actions. The `gh-pages` branch is used to host the website.
