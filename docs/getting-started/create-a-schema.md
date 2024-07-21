@@ -29,6 +29,9 @@ schema := elemental.NewSchema(map[string]elemental.Field{
 	"Occupation": {
 		Type: reflect.String,
 	},
+	"School": {
+		Type: reflect.String,
+	},
 	"Weapons": {
 		Type:    reflect.Slice,
 		Default: []string{},
