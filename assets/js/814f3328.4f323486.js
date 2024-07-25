@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelcengine=self.webpackChunkelcengine||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Releases","permalink":"/release-notes/release-notes","unlisted":false}]}')}}]);
