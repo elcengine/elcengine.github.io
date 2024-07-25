@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -11,7 +11,7 @@ const config: Config = {
 
   baseUrl: '/',
 
-  organizationName: 'elcengine', 
+  organizationName: 'elcengine',
   projectName: 'elcengine.github.io',
 
   onBrokenLinks: 'throw',
@@ -31,17 +31,13 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/elcengine/elcengine.github.io/tree/main/docs',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          path: "./release-notes",
+          routeBasePath: 'release-notes',
+          editUrl: 'https://github.com/elcengine/elcengine.github.io/tree/main/blog',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -65,7 +61,7 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/release-notes', label: 'Release Notes', position: 'left' },
         {
           href: 'https://github.com/elcengine/elemental',
           label: 'GitHub',
