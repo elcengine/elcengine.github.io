@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 100
 ---
 
 # Skip
 
-The `skip` method allows you to skip a specified number of documents in a collection.
+The `Skip` method allows you to skip a specified number of documents in a collection.
 
 ## Usage
 

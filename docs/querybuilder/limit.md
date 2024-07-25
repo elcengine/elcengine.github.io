@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 200
 ---
 
 # Limit
 
-The `limit` method allows you to limit the number of documents returned in a collection.
+The `Limit` method allows you to limit the number of documents returned in a collection.
 
 ## Usage
 
