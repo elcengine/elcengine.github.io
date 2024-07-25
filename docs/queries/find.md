@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 # Find
@@ -14,13 +14,13 @@ With elemental you are no longer forced to pass in `nil` to the `Find` method li
 witchers := WitcherModel.Find().Exec().([]Witcher)
 ```
 
-## Find with Filters
+## Usage with Filters
 
 You can filter the results of a `find` query by passing a filter object to the `Find` method.
 
 ```go
-witchers := WitcherModel.Find(Witcher{
-    School: "Wolf"
+witchers := WitcherModel.Find(primitive.M{
+    "school": "Wolf"
 }).Exec().([]Witcher)
 ```
 
