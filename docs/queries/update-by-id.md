@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-# UpdateByID
+# Update By ID
 
 The `UpdateByID` method is used to update a single document in the database that matches the given ID.
 

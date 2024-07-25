@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# FindOneAndUpdate
+# Find One And Update
 
 The `FindOneAndUpdate` method is used to find a single document in the database and update it.
 

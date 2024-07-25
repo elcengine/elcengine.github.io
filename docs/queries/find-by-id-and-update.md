@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# FindByIDAndUpdate
+# Find By ID And Update
 
 The `FindByIDAndUpdate` method is used to find a single document in the database by its ID and update it.
 

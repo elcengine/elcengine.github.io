@@ -2,7 +2,7 @@
 sidebar_position: 22
 ---
 
-# DeleteMany
+# Delete Many
 
 The `DeleteMany` method is used to delete multiple documents from a collection.
 

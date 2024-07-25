@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# UpdateOne
+# Update One
 
 The `UpdateOne` method is used to update a single document in the database that matches the given filter.
 

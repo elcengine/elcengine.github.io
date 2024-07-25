@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# CreateMany
+# Create Many
 
 The `CreateMany` method is used to insert multiple documents into a collection.
 

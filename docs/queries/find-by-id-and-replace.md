@@ -2,7 +2,7 @@
 sidebar_position: 15
 ---
 
-# FindByIDAndReplace
+# Find By ID And Replace
 
 The `FindByIDAndReplace` method is used to find a single document in the database by its ID and replace it.
 

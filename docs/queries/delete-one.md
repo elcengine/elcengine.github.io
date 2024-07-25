@@ -2,7 +2,7 @@
 sidebar_position: 21
 ---
 
-# DeleteOne
+# Delete One
 
 The `DeleteOne` method is used to delete a single document from a collection.
 

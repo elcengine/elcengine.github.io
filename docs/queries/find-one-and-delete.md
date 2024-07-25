@@ -2,7 +2,7 @@
 sidebar_position: 17
 ---
 
-# FindOneAndDelete
+# Find One And Delete
 
 The `FindOneAndDelete` method is used to find a single document and delete it from a collection.
 

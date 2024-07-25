@@ -2,7 +2,7 @@
 sidebar_position: 20
 ---
 
-# DeleteByID
+# Delete By ID
 
 The `DeleteByID` method is used to delete a single document from a collection by its ID.
 

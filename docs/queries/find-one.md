@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# FindOne
+# Find One
 
 The `findOne` query is used to retrieve a single record from a collection.
 

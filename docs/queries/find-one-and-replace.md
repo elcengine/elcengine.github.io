@@ -2,7 +2,7 @@
 sidebar_position: 14
 ---
 
-# FindOneAndReplace
+# Find One And Replace
 
 The `FindOneAndReplace` method is used to find a single document in the database by the given filter and replace it.
 

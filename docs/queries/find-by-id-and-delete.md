@@ -2,7 +2,7 @@
 sidebar_position: 18
 ---
 
-# FindByIDAndDelete
+# Find By ID And Delete
 
 The `FindByIDAndDelete` method is used to find a single document by its id and delete it from the database.
 
