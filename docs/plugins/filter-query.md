@@ -23,7 +23,7 @@ func main() {
     })
 
     app.Get("/api/v1/witchers", func(ctx *fiber.Ctx) error {
-        witchers := WitcherModel.Find(ctx.Locals("filterQuery")).Exec() // It is assumed that WitcherModel is an Elemental model, though this works even if used with the standard MongoDB driver
+        witchers := WitcherModel.Find((ctx.Locals("filterQuery")).(filter_query.FilterQueryResult).Filters).Exec() // It is assumed that WitcherModel is an Elemental model, though this works even if used with the standard MongoDB driver
         return ctx.JSON(witchers)
     })
 
