@@ -18,7 +18,7 @@ func main() {
     app := fiber.New()
 
     app.Use(func (ctx *fiber.Ctx) error {
-        ctx.Locals("filterQuery", filter_query.Parse(ctx.Request().URI().QueryString()))
+        ctx.Locals("filterQuery", filter_query.Parse(string(ctx.Request().URI().QueryString())))
         return ctx.Next()
     })
 
