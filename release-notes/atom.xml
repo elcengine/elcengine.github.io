@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://elcengine.github.io/release-notes</id>
     <title>Elemental Blog</title>
-    <updated>2021-08-26T00:00:00.000Z</updated>
+    <updated>2024-07-25T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://elcengine.github.io/release-notes"/>
     <subtitle>Elemental Blog</subtitle>
@@ -11,12 +11,22 @@
         <title type="html"><![CDATA[Releases]]></title>
         <id>https://elcengine.github.io/release-notes/release-notes</id>
         <link href="https://elcengine.github.io/release-notes/release-notes"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
+        <updated>2024-07-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[This is where you can find the latest updates to Elemental. We will be updating this page with every new release.]]></summary>
         <content type="html"><![CDATA[<p>This is where you can find the latest updates to Elemental. We will be updating this page with every new release.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="110">1.1.0<a class="hash-link" aria-label="Direct link to 1.1.0" title="Direct link to 1.1.0" href="https://elcengine.github.io/release-notes/release-notes#110">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-features">New Features<a class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features" href="https://elcengine.github.io/release-notes/release-notes#new-features">​</a></h3>
+<ul>
+<li>
+<p><strong>Filter Query Plugin</strong>: Middleware which allows you to transform a specially crafted RESTful query into a MongoDB query. This middleware is extremely useful when building RESTful APIs with Elemental.</p>
+</li>
+<li>
+<p><strong>Struct Validator Plugin</strong>: Middleware which allows you to validate a struct based on the tags defined in the struct. These validations directly operate on the database layer.</p>
+</li>
+</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="100">1.0.0<a class="hash-link" aria-label="Direct link to 1.0.0" title="Direct link to 1.0.0" href="https://elcengine.github.io/release-notes/release-notes#100">​</a></h2>
 <ul>
-<li>Still in development</li>
+<li><strong>Initial Release</strong>: This is the first release of Elemental. It includes all core features and plugins that are essential for building RESTful APIs with Go which are backed by MongoDB.</li>
 </ul>]]></content>
         <author>
             <name>Akalanka Perera</name>
