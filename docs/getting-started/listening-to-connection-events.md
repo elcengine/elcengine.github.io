@@ -9,7 +9,7 @@ Elemental provides a way to listen to connection pool events such as `Connection
 - Listens to the `ConnectionCreated` event of the default connection
 
 ```go
-e_connection.On("ConnectionCreated", func(alias string) {
+elemental.OnConnectionEvent("ConnectionCreated", func(alias string) {
   fmt.Println("Connection created for", alias)
 })
 ```
@@ -17,7 +17,7 @@ e_connection.On("ConnectionCreated", func(alias string) {
 - Listens to the `ConnectionCreated` event of a specific connection
 
 ```go
-e_connection.On("ConnectionCreated", func(alias string) {
+elemental.OnConnectionEvent("ConnectionCreated", func(alias string) {
   fmt.Println("Connection created for", alias)
 }, "my-connection")
 ```
@@ -27,13 +27,13 @@ e_connection.On("ConnectionCreated", func(alias string) {
 - Unsubscribes from the `ConnectionCreated` event of the default connection
 
 ```go
-e_connection.Off("ConnectionCreated")
+elemental.RemoveConnectionEvent("ConnectionCreated")
 ```
 
 - Unsubscribes from the `ConnectionCreated` event of a specific connection
 
 ```go
-e_connection.Off("ConnectionCreated", "my-connection")
+elemental.RemoveConnectionEvent("ConnectionCreated", "my-connection")
 ```
 
 **For a full list of supported events, refer [this page](https://pkg.go.dev/go.mongodb.org/mongo-driver/event).**
@@ -48,7 +48,7 @@ poolMonitor := &event.PoolMonitor{
     fmt.Println("Pool event:", evt)
   },
 }
-client := e_connection.Connect(e_connection.ConnectionOptions{
+client := elemental.Connect(elemental.ConnectionOptions{
   URI: "mongodb://localhost:27017",
   PoolMonitor: poolMonitor,
 })

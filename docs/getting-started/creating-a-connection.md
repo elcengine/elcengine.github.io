@@ -4,16 +4,16 @@ sidebar_position: 2
 
 # Creating a Connection
 
-All Connections in Elemental are managed by the `e_connection` package which can be imported as follows:
+All Connections in Elemental are managed by the `elemental` package which can be imported as follows:
 
 ```go
-import "github.com/elcengine/elemental/connection"
+import "github.com/elcengine/elemental/core"
 ```
 
 Connecting to a MongoDB database is a simple as calling the `ConnectURI` function with your connection string:
 
 ```go
-client := e_connection.ConnectURI("mongodb://localhost:27017")
+client := elemental.Connect("mongodb://localhost:27017")
 ```
 
 ## Connecting with Custom Client Options
@@ -22,7 +22,7 @@ You can also pass custom client options from the `go.mongodb.org/mongo-driver/mo
 
 ```go
 opts := options.Client().SetTimeout(10 * time.Second)
-client := e_connection.Connect(e_connection.ConnectionOptions{
+client := elemental.Connect(elemental.ConnectionOptions{
   URI: "mongodb://localhost:27017",
   ClientOptions: opts,
 })
@@ -37,7 +37,7 @@ An alias is a human-readable name that you can assign to your connection. This i
 A connection without an alias is assigned the default alias **`default`**
 
 ```go
-client := e_connection.Connect(e_connection.ConnectionOptions{
+client := elemental.Connect(elemental.ConnectionOptions{
   Alias: "my-connection",
   URI: "mongodb://localhost:27017",
 })
@@ -46,7 +46,7 @@ client := e_connection.Connect(e_connection.ConnectionOptions{
 ## Retrieve a Connection by Alias
 
 ```go
-client := e_connection.GetConnection("my-connection")
+client := elemental.GetConnection("my-connection")
 ```
 
 ## Retrieve the default database in a Connection
@@ -54,13 +54,13 @@ client := e_connection.GetConnection("my-connection")
 - Returns the default database in the default connection
 
 ```go
-db := e_connection.UseDefault()
+db := elemental.UseDefaultDatabase()
 ```
 
 - Returns the default database in the connection with the alias "my-connection"
 
 ```go
-db := e_connection.UseDefault("my-connection")
+db := elemental.UseDefaultDatabase("my-connection")
 ```
 
 ## Retrieve any database in a Connection
@@ -68,23 +68,23 @@ db := e_connection.UseDefault("my-connection")
 - Returns the database "my-database" in the default connection
 
 ```go
-db := e_connection.Use("my-database")
+db := elemental.UseDatabase("my-database")
 ```
 
 - Returns the database "my-database" in the connection with the alias "my-connection"
 
 ```go
-db := e_connection.Use("my-database", "my-connection")
+db := elemental.UseDatabase("my-database", "my-connection")
 ```
 
 ## Disconnect from a Connection
 
 ```go
-e_connection.Disconnect()
+elemental.Disconnect()
 ```
 
 - Or disconnect from multiple connections
 
 ```go
-e_connection.Disconnect("default", "my-connection", "some-other-connection")
+elemental.Disconnect("default", "my-connection", "some-other-connection")
 ```

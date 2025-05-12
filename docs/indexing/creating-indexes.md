@@ -30,5 +30,5 @@ indexModel := mongo.IndexModel{
     Keys: bson.D{{"Vitality", 1}},
     Options: options.Index().SetUnique(true),
 }
-e_connection.UseDefault().Collection("alghouls").Indexes().CreateOne(context.Background(), indexModel)
+elemental.UseDefaultDatabase().Collection("alghouls").Indexes().CreateOne(context.Background(), indexModel)
 ```
