@@ -17,7 +17,6 @@ witcher := WitcherModel.FindByIDAndReplace(primitive.ObjectIDFromHex("5f9f1b2b6f
 
 The example above finds the witcher with the given id and replaces it with a new document with the name "Eskel" and age 100.
 
-
 ## Usage with Options
 
 You can pass options to the `FindByIDAndReplace` method to specify how the replace operation should be performed.

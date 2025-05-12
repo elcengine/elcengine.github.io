@@ -6,7 +6,6 @@ sidebar_position: 1
 
 The Elemental ORM allows you to switch between different connections in the middle of a query. This is useful when you have multiple connections to different databases and you need to query data from both.
 
-
 ```go
 witchers := WitcherModel.Find().SetConnection("my-connection").Exec().([]Witcher)
 ```

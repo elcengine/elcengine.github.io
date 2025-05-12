@@ -24,7 +24,6 @@ WitcherModel.UnSchedule(id)
 
 In the example above, we are cancelling the scheduled query with the given `id` which was returned when the query was scheduled.
 
-
 ## Cancell all scheduled queries
 
 To cancel all scheduled queries, you can use the `UnScheduleAll` method.

@@ -14,7 +14,6 @@ result := WitcherModel.UpdateByID(primitive.ObjectIDFromHex("5f9f1b2b6f6b1b6d7f9
 
 The example above finds a single witcher with the given ID and updates their age to 200 and returns the underlying `*mongo.UpdateResult` object.
 
-
 ## Usage with Options
 
 You can pass options to the `UpdateByID` method to specify how the update operation should be performed.

@@ -17,3 +17,4 @@ CastleModel.OnInsert(func(castle Castle) {
 	fmt.Println("New castle inserted", castle)
 })
 `
+```

@@ -14,7 +14,6 @@ witcher := WitcherModel.FindByIDAndUpdate(primitive.ObjectIDFromHex("5f9f1b2b6f6
 
 The example above finds a single witcher with the given id and updates their age to 200 and returns the document as it was before the update.
 
-
 ## Usage with Options
 
 You can pass options to the `FindByIDAndUpdate` method to specify how the update operation should be performed.

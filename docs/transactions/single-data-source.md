@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Single Data Source
 
-Elemental provides a more user friendly interface for using database transactions compared to the driver by taking care of session management. 
+Elemental provides a more user friendly interface for using database transactions compared to the driver by taking care of session management.
 
 These are standard operations that can be performed on a single data source.
 

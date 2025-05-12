@@ -21,7 +21,7 @@ schema := elemental.NewSchema(map[string]elemental.Field{
 })
 ```
 
-Elemental will automatically create the index when the schema is created. 
+Elemental will automatically create the index when the schema is created.
 
 If you need to create an index after the schema has been created, you can always use the traditional way supported by the MongoDB driver.
 

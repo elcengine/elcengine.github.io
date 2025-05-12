@@ -14,7 +14,6 @@ result := WitcherModel.UpdateOne(primitive.M{"name": "Vesemir"}, primitive.M{"ag
 
 The example above finds a single witcher with the name "Vesemir" and updates their age to 200 and returns the underlying `*mongo.UpdateResult` object.
 
-
 ## Usage with Options
 
 You can pass options to the `UpdateOne` method to specify how the update operation should be performed.

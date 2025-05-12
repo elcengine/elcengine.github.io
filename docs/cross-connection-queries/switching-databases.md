@@ -6,7 +6,6 @@ sidebar_position: 2
 
 The Elemental ORM allows you to switch between different databases in the middle of a query. This is useful when you have multiple databases and you need to query data from both.
 
-
 ```go
 witchers := WitcherModel.Find().SetDatabase("secondary-database").Exec().([]Witcher)
 ```

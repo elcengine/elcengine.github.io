@@ -14,7 +14,6 @@ result := WitcherModel.UpdateOne(primitive.M{"name": "Vesemir"}, primitive.M{"ag
 
 The example above finds a single witcher with the name "Vesemir" and updates their age to 200. If the document does not exist, it will be inserted into the collection.
 
-
 ## Usage with Options
 
 You can pass the `Upsert` field as `true` in the `UpdateOptions` to specify that the operation should perform an upsert.

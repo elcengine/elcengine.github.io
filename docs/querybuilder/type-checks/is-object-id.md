@@ -12,4 +12,4 @@ The `IsObjectID` method is chained to the `Where` method and is used to filter t
 witchers := WitcherModel.Where("_id").IsObjectID().Exec().([]Witcher)
 ```
 
-In the example above, we are filtering the results to only include witchers whose _id field is an object ID.
+In the example above, we are filtering the results to only include witchers whose \_id field is an object ID.

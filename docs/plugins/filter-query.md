@@ -37,124 +37,136 @@ func main() {
 
 - **Query**: `/api/v1/witchers?filter[name]=Geralt`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "name": "Geralt"
-    }
-    ```
+  **MongoDB Query**:
+
+  ```json
+  {
+    "name": "Geralt"
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[name]=eq(Geralt)`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "name": "Geralt"
-    }
-    ```
+  **MongoDB Query**:
+
+  ```json
+  {
+    "name": "Geralt"
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[age]=gt(100)`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "age": {
-            "$gt": 100
-        }
+  **MongoDB Query**:
+
+  ```json
+  {
+    "age": {
+      "$gt": 100
     }
-    ```
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[age]=gte(100)`
-        
-    **MongoDB Query**:
-    ```json
-    {
-        "age": {
-            "$gte": 100
-        }
+
+  **MongoDB Query**:
+
+  ```json
+  {
+    "age": {
+      "$gte": 100
     }
-    ```
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[age]=lt(100)`
-        
-    **MongoDB Query**:
-    ```json
-    {
-        "age": {
-            "$lt": 100
-        }
+
+  **MongoDB Query**:
+
+  ```json
+  {
+    "age": {
+      "$lt": 100
     }
-    ```
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[age]=lte(100)`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "age": {
-            "$lte": 100
-        }
+  **MongoDB Query**:
+
+  ```json
+  {
+    "age": {
+      "$lte": 100
     }
-    ```
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[retired]=true`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "retired": true
-    }
-    ```
+  **MongoDB Query**:
+
+  ```json
+  {
+    "retired": true
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[retired]=false`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "retired": false
-    }
-    ```
+  **MongoDB Query**:
+
+  ```json
+  {
+    "retired": false
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[weapons]=in(Silver Sword,Steel Sword)`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "weapons": {
-            "$in": ["Silver Sword", "Steel Sword"]
-        }
+  **MongoDB Query**:
+
+  ```json
+  {
+    "weapons": {
+      "$in": ["Silver Sword", "Steel Sword"]
     }
-    ```
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[weapons]=nin(Silver Sword,Steel Sword)`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "weapons": {
-            "$nin": ["Silver Sword", "Steel Sword"]
-        }
+  **MongoDB Query**:
+
+  ```json
+  {
+    "weapons": {
+      "$nin": ["Silver Sword", "Steel Sword"]
     }
-    ```
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[name]=reg(Geralt)`
 
-    **MongoDB Query**:
-    ```js
-    {
-        "name": {
-            "$regex": /Geralt/
-        }
-    }
-    ```
+  **MongoDB Query**:
+
+  ```js
+  {
+      "name": {
+          "$regex": /Geralt/
+      }
+  }
+  ```
 
 - **Query**: `/api/v1/witchers?filter[school]=exists(true)`
 
-    **MongoDB Query**:
-    ```json
-    {
-        "school": {
-            "$exists": true
-        }
+  **MongoDB Query**:
+
+  ```json
+  {
+    "school": {
+      "$exists": true
     }
-    ```
+  }
+  ```

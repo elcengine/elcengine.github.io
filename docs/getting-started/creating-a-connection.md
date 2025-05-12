@@ -38,7 +38,7 @@ A connection without an alias is assigned the default alias **`default`**
 
 ```go
 client := e_connection.Connect(e_connection.ConnectionOptions{
-  Alias: "my-connection",	
+  Alias: "my-connection",
   URI: "mongodb://localhost:27017",
 })
 ```
@@ -56,7 +56,9 @@ client := e_connection.GetConnection("my-connection")
 ```go
 db := e_connection.UseDefault()
 ```
+
 - Returns the default database in the connection with the alias "my-connection"
+
 ```go
 db := e_connection.UseDefault("my-connection")
 ```

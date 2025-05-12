@@ -94,7 +94,6 @@ WitcherModel.DeleteByID(witcher.ID).Exec()
 
 **Note:** The above examples are just a few of the many operations you can perform with a model. For a complete list of operations, refer to each of their individual sections under **[Basic Queries](/docs/category/basic-operations) and [Querybuilder](/docs/category/querybuilder)**.
 
-
 ## The Native Model
 
 Elemental provides a pre-defined model called `NativeModel` which can be used to interact with your MongoDB collection without defining a custom model. The `NativeModel` is of type `map[string]interface{}` and can be used to access all API methods provided by Elemental.

@@ -14,7 +14,6 @@ witcher := WitcherModel.FindOneAndUpdate(primitive.M{"name": "Vesemir"}, primiti
 
 The example above finds a single witcher with the name "Vesemir" and updates their age to 200 and returns the document as it was before the update.
 
-
 ## Usage with Options
 
 You can pass options to the `FindOneAndUpdate` method to specify how the update operation should be performed.

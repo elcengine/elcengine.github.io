@@ -14,7 +14,6 @@ result := WitcherModel.UpdateMany(primitive.M{"school": "Wolf"}, primitive.M{"re
 
 The example above finds all witchers from the Wolf school and updates their `retired` field to `true`. The method returns the underlying `*mongo.UpdateResult` object.
 
-
 ## Usage with Options
 
 You can pass options to the `UpdateMany` method to specify how the update operation should be performed.

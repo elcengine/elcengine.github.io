@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # The Audit Model
 
-The Audit model is a special model that is used to log changes to other models. It is used to track changes to documents in the database. 
+The Audit model is a special model that is used to log changes to other models. It is used to track changes to documents in the database.
 
 ```go
 var AuditModel = NewModel[Audit]("Audit", NewSchema(map[string]Field{

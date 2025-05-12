@@ -14,7 +14,6 @@ witchers := WitcherModel.Where("school").Equals("wolf").Exec().([]Witcher)
 
 In the example above, we are filtering the results to only include witchers from the Wolf school.
 
-
 ## Usage with a second argument
 
 ```go
@@ -30,7 +29,6 @@ witcher := WitcherModel.FindOne().Where("name").Equals("Geralt").Exec().(*Witche
 ```
 
 In the example above, we are finding the document with the name "Geralt" in the collection.
-
 
 ## Usage with a Delete Operation
 

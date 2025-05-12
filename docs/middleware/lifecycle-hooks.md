@@ -28,7 +28,6 @@ WitcherModel.PreSave(func(witcher Witcher) bool {
 
 In the example above, we define a `PreSave` middleware function on the `WitcherModel`. This middleware function will be executed before a document is saved to the database.
 
-
 ## Available Middleware Functions
 
 ### Pre Middleware Functions
@@ -39,7 +38,6 @@ In the example above, we define a `PreSave` middleware function on the `WitcherM
 - **PreDeleteMany**: Executed before multiple documents are deleted from the database.
 - **PreFindOneAndUpdate**: Executed before a single document is updated in the database.
 - **PreFindOneAndDelete**: Executed before a single document is deleted from the database.
-
 
 ### Post Middleware Functions
 
