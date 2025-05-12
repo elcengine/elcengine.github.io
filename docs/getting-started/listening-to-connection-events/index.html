@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">Listening to Connection Events | Elemental</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://elcengine.github.io/docs/getting-started/listening-to-connection-events"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Listening to Connection Events | Elemental"><meta data-rh="true" name="description" content="Elemental provides a way to listen to connection pool events such as ConnectionCreated, ConnectionReady, and ConnectionClosedin a much more user-friendly way."><meta data-rh="true" property="og:description" content="Elemental provides a way to listen to connection pool events such as ConnectionCreated, ConnectionReady, and ConnectionClosedin a much more user-friendly way."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://elcengine.github.io/docs/getting-started/listening-to-connection-events"><link data-rh="true" rel="alternate" href="https://elcengine.github.io/docs/getting-started/listening-to-connection-events" hreflang="en"><link data-rh="true" rel="alternate" href="https://elcengine.github.io/docs/getting-started/listening-to-connection-events" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/release-notes/rss.xml" title="Elemental RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/release-notes/atom.xml" title="Elemental Atom Feed"><link rel="stylesheet" href="/assets/css/styles.c66ed827.css">
-<script src="/assets/js/runtime~main.168dd6ef.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.d52c9a8a.js" defer="defer"></script>
 <script src="/assets/js/main.74b2ea7d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -14,14 +14,14 @@
 <ul>
 <li>Listens to the <code>ConnectionCreated</code> event of the default connection</li>
 </ul>
-<pre><code class="language-go">e_connection.On(&quot;ConnectionCreated&quot;, func(alias string) {
+<pre><code class="language-go">elemental.OnConnectionEvent(&quot;ConnectionCreated&quot;, func(alias string) {
   fmt.Println(&quot;Connection created for&quot;, alias)
 })
 </code></pre>
 <ul>
 <li>Listens to the <code>ConnectionCreated</code> event of a specific connection</li>
 </ul>
-<pre><code class="language-go">e_connection.On(&quot;ConnectionCreated&quot;, func(alias string) {
+<pre><code class="language-go">elemental.OnConnectionEvent(&quot;ConnectionCreated&quot;, func(alias string) {
   fmt.Println(&quot;Connection created for&quot;, alias)
 }, &quot;my-connection&quot;)
 </code></pre>
@@ -29,12 +29,12 @@
 <ul>
 <li>Unsubscribes from the <code>ConnectionCreated</code> event of the default connection</li>
 </ul>
-<pre><code class="language-go">e_connection.Off(&quot;ConnectionCreated&quot;)
+<pre><code class="language-go">elemental.RemoveConnectionEvent(&quot;ConnectionCreated&quot;)
 </code></pre>
 <ul>
 <li>Unsubscribes from the <code>ConnectionCreated</code> event of a specific connection</li>
 </ul>
-<pre><code class="language-go">e_connection.Off(&quot;ConnectionCreated&quot;, &quot;my-connection&quot;)
+<pre><code class="language-go">elemental.RemoveConnectionEvent(&quot;ConnectionCreated&quot;, &quot;my-connection&quot;)
 </code></pre>
 <p><strong>For a full list of supported events, refer <a href="https://pkg.go.dev/go.mongodb.org/mongo-driver/event">this page</a>.</strong></p>
 <h2 id="override-the-default-elemental-pool-monitor">Override the default Elemental pool monitor</h2>
@@ -44,7 +44,7 @@
     fmt.Println(&quot;Pool event:&quot;, evt)
   },
 }
-client := e_connection.Connect(e_connection.ConnectionOptions{
+client := elemental.Connect(elemental.ConnectionOptions{
   URI: &quot;mongodb://localhost:27017&quot;,
   PoolMonitor: poolMonitor,
 })
