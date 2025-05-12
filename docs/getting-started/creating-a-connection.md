@@ -10,7 +10,7 @@ All Connections in Elemental are managed by the `elemental` package which can be
 import "github.com/elcengine/elemental/core"
 ```
 
-Connecting to a MongoDB database is a simple as calling the `ConnectURI` function with your connection string:
+Connecting to a MongoDB database is a simple as calling the `Connect` function with your connection string:
 
 ```go
 client := elemental.Connect("mongodb://localhost:27017")
