@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Elemental is an **Object Document Mapper (ODM)** for **Golang and MongoDB**. It is designed to address your pain points when working with the plain MongoDB Go driver.
 
-Elemental is heavily inspired by the popular **Mongoose** library for **Node.js**. It provides a simple and intuitive way to work with MongoDB in Go while still giving you the flexibility to work with the raw MongoDB driver when needed.
+Elemental is inspired by multiple ODMs and ORMs such as [Mongoose](https://mongoosejs.com), [TypeORM](https://typeorm.io), and [Eloquent](https://laravel.com/docs/12.x/eloquent) and its primary purpose is to improve developer experience without loss of performance or extensibility
 
 With Elemental, you can:
 
@@ -18,6 +18,8 @@ With Elemental, you can:
 
 - **Interact with multiple data sources** with ease.
 
+- **Create and manage migrations and seeders** to keep your database in sync with your application needs.
+
 - **And so much more!**
 
-For a full list of features, have a good look though the side panel. If you have any questions or need help, feel free to open an issue on the **[Elemental GitHub repository](https://github.com/elcengine/elemental/issues)**.
+For a full list of features, have a good look though the side panel. If you have any questions or need help, feel free to open an issue at the **[Elemental GitHub repository](https://github.com/elcengine/elemental/issues)**.

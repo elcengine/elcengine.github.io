@@ -9,7 +9,7 @@ The `Regex` method is chained to the `Where` method and is used to filter the re
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("name").Regex("^G").Exec().([]Witcher)
+witchers := WitcherModel.Where("name").Regex("^G").ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose name starts with the letter "G".

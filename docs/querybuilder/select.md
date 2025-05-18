@@ -9,7 +9,7 @@ The `Select` method is used to specify which fields to include in the results.
 ## Usage
 
 ```go
-witchers := WitcherModel.Find().Select("name", "age").Exec().([]Witcher)
+witchers := WitcherModel.Find().Select("name", "age").ExecTT()
 ```
 
 In the example above, we are selecting only the `name` and `age` fields from the `Witcher` documents.
@@ -17,7 +17,7 @@ In the example above, we are selecting only the `name` and `age` fields from the
 ## Usage with a string input
 
 ```go
-witchers := WitcherModel.Find().Select("name age").Exec().([]Witcher)
+witchers := WitcherModel.Find().Select("name age").ExecTT()
 ```
 
 ## Usage with a map input
@@ -26,11 +26,11 @@ witchers := WitcherModel.Find().Select("name age").Exec().([]Witcher)
 witchers := WitcherModel.Find().Select(primitive.M{
     "name": 1,
     "age":  1,
-}).Exec().([]Witcher)
+}).ExecTT()
 ```
 
 ## Usage with a slice input
 
 ```go
-witchers := WitcherModel.Find().Select([]string{"name", "age"}).Exec().([]Witcher)
+witchers := WitcherModel.Find().Select([]string{"name", "age"}).ExecTT()
 ```

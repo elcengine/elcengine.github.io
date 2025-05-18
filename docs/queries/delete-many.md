@@ -6,7 +6,7 @@ sidebar_position: 22
 
 The `DeleteMany` method is used to delete multiple documents from a collection.
 
-## Usage.
+## Usage
 
 ```go
 result := WitcherModel.DeleteMany(primitive.M{"school": "Wolf"}).Exec().(*mongo.DeleteResult)

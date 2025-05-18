@@ -9,7 +9,7 @@ The `IsUndefined` method is chained to the `Where` method and is used to filter 
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("signs").IsUndefined().Exec().([]Witcher)
+witchers := WitcherModel.Where("signs").IsUndefined().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose signs field is undefined.

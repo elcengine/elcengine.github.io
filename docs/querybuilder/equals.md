@@ -9,7 +9,7 @@ The `Equals` method is chained to the `Where` method and is used to filter the r
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("school").Equals("wolf").Exec().([]Witcher)
+witchers := WitcherModel.Where("school").Equals("wolf").ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers from the Wolf school.

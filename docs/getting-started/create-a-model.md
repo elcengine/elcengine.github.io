@@ -101,3 +101,13 @@ Elemental provides a pre-defined model called `NativeModel` which can be used to
 ```go
 witchers := elemental.NativeModel.SetCollection("witchers").Find().Exec().([]map[string]interface{})
 ```
+
+
+## Context Propagation
+
+Elemental queries by default use `context.TODO()`. However you can pass in your own context to the query at the time of calling `Exec`:
+
+```go
+ctx := context.Background()
+witcher := WitcherModel.FindOne().Exec(ctx).(*Witcher)
+```

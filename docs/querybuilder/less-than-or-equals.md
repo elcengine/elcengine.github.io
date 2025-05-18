@@ -9,7 +9,7 @@ The `LessThanOrEquals` method is chained to the `Where` method and is used to fi
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("age").LessThanOrEquals(100).Exec().([]Witcher)
+witchers := WitcherModel.Where("age").LessThanOrEquals(100).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers who are less than or equal to 100 years old.

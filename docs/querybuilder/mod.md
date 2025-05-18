@@ -9,7 +9,7 @@ The `Mod` method is chained to the `Where` method and is used to filter the resu
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("age").Mod(5, 2).Exec().([]Witcher)
+witchers := WitcherModel.Where("age").Mod(5, 2).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose age is divisible by 5 and has a remainder of 2.

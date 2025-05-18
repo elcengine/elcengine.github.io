@@ -16,5 +16,6 @@ The `Model.onInsert` method allows you to listen to when a new document correspo
 CastleModel.OnInsert(func(castle Castle) {
 	fmt.Println("New castle inserted", castle)
 })
-`
 ```
+
+The return value of the trigger is a `*mongo.ChangeStream` which you can later close if you want to stop listening to the changes. 

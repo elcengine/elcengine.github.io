@@ -9,7 +9,7 @@ The `GreaterThan` method is chained to the `Where` method and is used to filter 
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("age").GreaterThan(100).Exec().([]Witcher)
+witchers := WitcherModel.Where("age").GreaterThan(100).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers who are more than 100 years old.

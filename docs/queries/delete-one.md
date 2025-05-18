@@ -6,7 +6,7 @@ sidebar_position: 21
 
 The `DeleteOne` method is used to delete a single document from a collection.
 
-## Usage.
+## Usage
 
 ```go
 result := WitcherModel.DeleteOne(primitive.M{"name": "Vesemir"}).Exec().(*mongo.DeleteResult)

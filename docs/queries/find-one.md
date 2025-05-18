@@ -6,10 +6,10 @@ sidebar_position: 5
 
 The `findOne` query is used to retrieve a single record from a collection.
 
-## Usage.
+## Usage
 
 ```go
-witcher := WitcherModel.FindOne().Exec().(*Witcher)
+witcher := WitcherModel.FindOne().ExecPtr()
 ```
 
 ## Usage with Filters
@@ -19,7 +19,7 @@ You can filter the results of a `findOne` query by passing a filter object to th
 ```go
 witcher := WitcherModel.FindOne(primitive.M{
     "school": "Wolf"
-}).Exec().(*Witcher)
+}).ExecPtr()
 ```
 
 In the example above, we are finding a single witcher from the Wolf school.

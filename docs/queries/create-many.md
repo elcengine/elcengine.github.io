@@ -6,7 +6,7 @@ sidebar_position: 2
 
 The `CreateMany` method is used to insert multiple documents into a collection.
 
-## Usage.
+## Usage
 
 ```go
 witchers := WitcherModel.CreateMany([]Witcher{
@@ -26,7 +26,7 @@ witchers := WitcherModel.CreateMany([]Witcher{
 		Retired:    false,
 		School:     nil
 	},
-}).Exec().(Witcher)
+}).ExecTT()
 
 for _, witcher := range witchers {
 	fmt.Println(witcher.ID) // The ObjectID of the newly created document

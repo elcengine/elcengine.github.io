@@ -9,7 +9,7 @@ The `IsType` method is chained to the `Where` method and is used to filter the r
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("name").IsType(bson.TypeString).Exec().([]Witcher)
+witchers := WitcherModel.Where("name").IsType(bson.TypeString).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose name is a string.

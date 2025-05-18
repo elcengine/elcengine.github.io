@@ -9,7 +9,7 @@ The `IsBoolean` method is chained to the `Where` method and is used to filter th
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("retired").IsBoolean().Exec().([]Witcher)
+witchers := WitcherModel.Where("retired").IsBoolean().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose retired field is a boolean.

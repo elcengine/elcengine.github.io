@@ -6,7 +6,7 @@ sidebar_position: 11
 
 The `Upsert` method is used to update a single document in a collection based on a filter and insert the document if it does not exist.
 
-## Usage.
+## Usage
 
 ```go
 result := WitcherModel.UpdateOne(primitive.M{"name": "Vesemir"}, primitive.M{"age": 200}).Upsert().Exec().(*mongo.UpdateResult)

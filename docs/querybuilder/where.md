@@ -9,7 +9,7 @@ The `Where` method is used to filter documents in a collection based on a specif
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("school").Equals("wolf").Exec().([]Witcher)
+witchers := WitcherModel.Where("school").Equals("wolf").ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers from the Wolf school.
@@ -17,7 +17,7 @@ In the example above, we are filtering the results to only include witchers from
 ## Usage with a second argument
 
 ```go
-witchers := WitcherModel.Where("school", "wolf").Exec().([]Witcher)
+witchers := WitcherModel.Where("school", "wolf").ExecTT()
 ```
 
 Passing the second argument to the `Where` method is equivalent to calling the `Equals` method on the first argument. The example above is equivalent to the first example.
@@ -25,7 +25,7 @@ Passing the second argument to the `Where` method is equivalent to calling the `
 ## Usage with FindOne
 
 ```go
-witcher := WitcherModel.FindOne().Where("name").Equals("Geralt").Exec().(*Witcher)
+witcher := WitcherModel.FindOne().Where("name").Equals("Geralt").ExecPtr()
 ```
 
 In the example above, we are finding the document with the name "Geralt" in the collection.

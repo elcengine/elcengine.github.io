@@ -6,7 +6,7 @@ sidebar_position: 8
 
 The `UpdateOne` method is used to update a single document in the database that matches the given filter.
 
-## Usage.
+## Usage
 
 ```go
 result := WitcherModel.UpdateOne(primitive.M{"name": "Vesemir"}, primitive.M{"age": 200}).Exec().(*mongo.UpdateResult)

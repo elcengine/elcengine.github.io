@@ -9,7 +9,7 @@ The `Skip` method allows you to skip a specified number of documents in a collec
 ## Usage
 
 ```go
-witchers := WitcherModel.Find().Skip(10).Exec().([]Witcher)
+witchers := WitcherModel.Find().Skip(10).ExecTT()
 ```
 
 In the example above, we are skipping the first 10 documents in the collection.

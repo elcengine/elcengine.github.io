@@ -9,7 +9,7 @@ The `IsBinary` method is chained to the `Where` method and is used to filter the
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("potions").IsBinary().Exec().([]Witcher)
+witchers := WitcherModel.Where("potions").IsBinary().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose potions field is binary.

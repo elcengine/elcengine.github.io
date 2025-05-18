@@ -9,7 +9,7 @@ The `IsInt64` method is chained to the `Where` method and is used to filter the 
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("age").IsInt64().Exec().([]Witcher)
+witchers := WitcherModel.Where("age").IsInt64().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose age field is an int64.

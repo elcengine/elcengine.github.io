@@ -4,32 +4,67 @@ sidebar_position: 1
 
 # Filter Query
 
-Middleware which allows you to transform a specially crafted RESTful query into a MongoDB query. This middleware is extremely useful when building RESTful APIs with Elemental.
+Functions which allow you to transform a specially crafted RESTful query into a MongoDB query. This middleware is extremely useful when building RESTful APIs with Elemental.
+
+## Raw Usage
+
+```go
+import (
+    "fmt"
+    "github.com/elcengine/elemental/plugins/filterquery"
+)
+
+func main() {
+  q := fq.Parse("?filter[name]=eq(Geralt)&filter[age]=gt(100)&sort=-name&select=name,age")
+  fmt.Println(q.Filters) // map[string]interface{}{"name": map[string]interface{}{"$eq": "Geralt"}, "age": map[string]interface{}{"$gt": 100}}
+}
+```
 
 ## Usage with Go Fiber
 
 ```go
 import (
     "github.com/gofiber/fiber/v2"
-    "github.com/elcengine/elemental/plugins/filter-query"
+    "github.com/elcengine/elemental/plugins/filterquery/middleware"
 )
 
 func main() {
     app := fiber.New()
 
-    app.Use(func (ctx *fiber.Ctx) error {
-        ctx.Locals("filterQuery", filter_query.Parse(string(ctx.Request().URI().QueryString())))
-        return ctx.Next()
-    })
+    app.Use(fqm.NewGoFiber())
 
     app.Get("/api/v1/witchers", func(ctx *fiber.Ctx) error {
-        witchers := WitcherModel.Find((ctx.Locals("filterQuery")).(filter_query.FilterQueryResult).Filters).Exec() // It is assumed that WitcherModel is an Elemental model, though this works even if used with the standard MongoDB driver
+        q := ctx.Locals(fqm.CtxKey).(fq.FilterQueryResult)
+        witchers := WitcherModel.Find(q.Filters).Sort(q.Sorts).Select(q.Select).ExecTT()
         return ctx.JSON(witchers)
     })
 
     app.Listen(":3000")
 }
 ```
+
+## Usage Shortcuts
+
+- **QS**
+
+  - Construct an Elemental query directly from a request's query string.
+  It uses the filterquery plugin to parse the query string and apply filters, sorting, lookups, and projections to the final query.
+  
+  <br/>
+
+  ```go
+  witchers := WitcherModel.QS("filter[name]=Geralt").ExecTT()
+  ```
+
+- **QSR**
+  - Construct an Elemental query directly from a FilterQueryResult.
+
+    <br/>
+
+  ```go
+  witchers := WitcherModel.QSR(fq.Parse("filter[name]=Geralt")).ExecTT()
+  ```
+
 
 ## Example RESTful Queries and their MongoDB Equivalents
 
@@ -51,7 +86,9 @@ func main() {
 
   ```json
   {
-    "name": "Geralt"
+    "name": {
+      "$eq": "Geralt"
+    }
   }
   ```
 

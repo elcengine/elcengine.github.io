@@ -6,7 +6,7 @@ sidebar_position: 1
 
 The `Create` method is used to insert a single document into a collection.
 
-## Usage.
+## Usage
 
 ```go
 witcher := WitcherModel.Create(Witcher{
@@ -16,7 +16,7 @@ witcher := WitcherModel.Create(Witcher{
 	Weapons:    []string{"Silver Sword", "Steel Sword"},
 	Retired:    false,
 	School:     nil
-}).Exec().(Witcher)
+}).ExecT()
 
 fmt.Println(witcher.ID) // The ObjectID of the newly created document
 fmt.Println(witcher.CreatedAt) // The timestamp when the document was created

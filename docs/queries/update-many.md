@@ -6,7 +6,7 @@ sidebar_position: 10
 
 The `UpdateMany` method is used to update multiple documents in a collection based on a filter.
 
-## Usage.
+## Usage
 
 ```go
 result := WitcherModel.UpdateMany(primitive.M{"school": "Wolf"}, primitive.M{"retired": true}).Exec().(*mongo.UpdateResult)

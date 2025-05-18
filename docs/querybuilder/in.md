@@ -9,7 +9,7 @@ The `In` method is chained to the `Where` method and is used to filter the resul
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("age").In(50, 51, 52).Exec().([]Witcher)
+witchers := WitcherModel.Where("age").In(50, 51, 52).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose age is 50, 51, or 52.13

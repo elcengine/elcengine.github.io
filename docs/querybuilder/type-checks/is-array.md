@@ -9,7 +9,7 @@ The `IsArray` method is chained to the `Where` method and is used to filter the 
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("weapons").IsArray().Exec().([]Witcher)
+witchers := WitcherModel.Where("weapons").IsArray().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose weapons field is an array.

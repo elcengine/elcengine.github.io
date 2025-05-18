@@ -18,9 +18,7 @@ schema := elemental.NewSchema(map[string]elemental.Field{
 	"Name": {
 		Type:     reflect.String,
 		Required: true,
-		Index: options.IndexOptions{
-			Unique: &unique,
-		},
+		Index: options.Index().SetUnique(true),
 	},
 	"Age": {
 		Type:    reflect.Int,

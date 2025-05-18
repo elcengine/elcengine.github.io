@@ -9,7 +9,7 @@ The `OrWhere` method is a shorter way of chaining the `Where` method to the `Or`
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("name").Equals("Geralt").OrWhere("age").Equals(100).Exec().([]Witcher)
+witchers := WitcherModel.Where("name").Equals("Geralt").OrWhere("age").Equals(100).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose name is Geralt or age is 100.

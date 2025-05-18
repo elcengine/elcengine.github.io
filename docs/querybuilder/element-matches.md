@@ -11,7 +11,7 @@ The `ElementMatches` method is chained to the `Where` method and is used to filt
 ```go
 witchers := WitcherModel.Where("weapons").ElementMatches(primitive.M{
     "$eq": "Steel Sword",
-}).Exec().([]Witcher)
+}).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers who have a Steel Sword in their weapons array.

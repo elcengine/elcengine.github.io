@@ -9,7 +9,7 @@ The `IsSymbol` method is chained to the `Where` method and is used to filter the
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("enemies").IsSymbol().Exec().([]Witcher)
+witchers := WitcherModel.Where("enemies").IsSymbol().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose enemies field is a symbol.

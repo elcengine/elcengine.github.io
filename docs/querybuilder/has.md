@@ -9,7 +9,7 @@ The `Has` method is chained to the `Where` method and is used to filter the resu
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("weapons").Has("Steel Sword").Exec().([]Witcher)
+witchers := WitcherModel.Where("weapons").Has("Steel Sword").ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers who have a Steel Sword in their weapons array.

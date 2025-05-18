@@ -9,7 +9,7 @@ The `IsObjectID` method is chained to the `Where` method and is used to filter t
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("_id").IsObjectID().Exec().([]Witcher)
+witchers := WitcherModel.Where("_id").IsObjectID().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose \_id field is an object ID.

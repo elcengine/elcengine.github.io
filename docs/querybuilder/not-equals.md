@@ -9,7 +9,7 @@ The `NotEquals` method is chained to the `Where` method and is used to filter th
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("school").NotEquals("wolf").Exec().([]Witcher)
+witchers := WitcherModel.Where("school").NotEquals("wolf").ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers that are not from the Wolf school.

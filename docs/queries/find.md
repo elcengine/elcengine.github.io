@@ -11,7 +11,7 @@ The `find` query is used to retrieve a list of records from a collection. It is 
 With elemental you are no longer forced to pass in `nil` to the `Find` method like in the driver if you want to retrieve all records. You can simply call the `Find` method without any arguments.
 
 ```go
-witchers := WitcherModel.Find().Exec().([]Witcher)
+witchers := WitcherModel.Find().ExecTT()
 ```
 
 ## Usage with Filters
@@ -21,7 +21,7 @@ You can filter the results of a `find` query by passing a filter object to the `
 ```go
 witchers := WitcherModel.Find(primitive.M{
     "school": "Wolf"
-}).Exec().([]Witcher)
+}).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers from the Wolf school.

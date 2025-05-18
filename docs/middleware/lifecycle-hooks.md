@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# LifeCycle Hooks
+# Lifecycle Hooks
 
 Elemental provides a way to inject custom logic into the lifecycle of a model. This is done by defining middleware functions that are executed at specific points in the lifecycle of a model.
 

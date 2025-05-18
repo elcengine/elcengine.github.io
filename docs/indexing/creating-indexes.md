@@ -7,14 +7,11 @@ sidebar_position: 1
 Indexes can be defined within a Schema under the `Index` field. This field accepts the original MongoDB index options under the `options.IndexOptions` type.
 
 ```go
-unique := true
 schema := elemental.NewSchema(map[string]elemental.Field{
 	"Vitality": {
 		Type:     reflect.Int,
 		Required: true,
-		Index: options.IndexOptions{
-			Unique: &unique,
-		},
+		Index: options.Index().SetUnique(true),
 	},
 }, elemental.SchemaOptions{
 	Collection: "alghouls",

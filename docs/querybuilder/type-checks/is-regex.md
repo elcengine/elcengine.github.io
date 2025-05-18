@@ -9,7 +9,7 @@ The `IsRegex` method is chained to the `Where` method and is used to filter the 
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("enemies").IsRegex().Exec().([]Witcher)
+witchers := WitcherModel.Where("enemies").IsRegex().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose enemies field is a regex.

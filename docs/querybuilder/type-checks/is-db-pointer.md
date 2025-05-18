@@ -9,7 +9,7 @@ The `IsDBPointer` method is chained to the `Where` method and is used to filter 
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("enemies").IsDBPointer().Exec().([]Witcher)
+witchers := WitcherModel.Where("enemies").IsDBPointer().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose enemies field is a db pointer.

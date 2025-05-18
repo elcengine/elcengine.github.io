@@ -9,7 +9,7 @@ The `Size` method is chained to the `Where` method and is used to filter the res
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("weapons").Size(3).Exec().([]Witcher)
+witchers := WitcherModel.Where("weapons").Size(3).ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers who have exactly 3 weapons in their weapons array.

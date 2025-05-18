@@ -9,7 +9,7 @@ The `IsDateTime` method is chained to the `Where` method and is used to filter t
 ## Usage
 
 ```go
-witchers := WitcherModel.Where("created_at").IsDateTime().Exec().([]Witcher)
+witchers := WitcherModel.Where("created_at").IsDateTime().ExecTT()
 ```
 
 In the example above, we are filtering the results to only include witchers whose created_at field is of type datetime.

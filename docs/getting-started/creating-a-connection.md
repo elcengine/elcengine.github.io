@@ -88,3 +88,15 @@ elemental.Disconnect()
 ```go
 elemental.Disconnect("default", "my-connection", "some-other-connection")
 ```
+
+## Checking if the Connection is Alive
+
+```go
+err := elemental.Ping()
+```
+
+- Or check if a specific connection is alive
+
+```go
+err := elemental.Ping("my-connection")
+```

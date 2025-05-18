@@ -6,7 +6,7 @@ sidebar_position: 9
 
 The `UpdateByID` method is used to update a single document in the database that matches the given ID.
 
-## Usage.
+## Usage
 
 ```go
 result := WitcherModel.UpdateByID(primitive.ObjectIDFromHex("5f9f1b2b6f6b1b6d7f9b1b6d"), primitive.M{"age": 200}).Exec().(*mongo.UpdateResult)

@@ -16,6 +16,8 @@ It internally makes use of the `Triggers` defined within Elemental. This means t
 CastleModel.EnableAuditing()
 ```
 
+#### Alternatively you can pass `Audting` as `true` within the schema options when creating a new model.
+
 ## TODO
 
 - [ ] Implement concurrency control to make sure that the same audit log is not written multiple times.
