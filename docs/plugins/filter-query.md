@@ -34,7 +34,7 @@ func main() {
     app.Use(fqm.NewGoFiber())
 
     app.Get("/api/v1/witchers", func(ctx *fiber.Ctx) error {
-        q := ctx.Locals(fqm.CtxKey).(fq.FilterQueryResult)
+        q := ctx.Locals(fqm.CtxKey).(fq.Result)
         witchers := WitcherModel.Find(q.Filters).Sort(q.Sorts).Select(q.Select).ExecTT()
         return ctx.JSON(witchers)
     })
