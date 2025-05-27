@@ -20,11 +20,11 @@ const FeatureList: FeatureItem[] = [
     )
   },
   {
-    title: 'Plugin Ecosystem',
+    title: 'Plugin Support',
     img: require('@site/static/img/plugins.jpg').default,
     description: (
       <>
-        Elemental has a rich plugin ecosystem which allows you to extend the functionality of the Querybuilder. It also
+        Elemental has rich plugin support which allows you to extend the functionality of the Querybuilder. It also
         comes with a set of pre-built plugins.
       </>
     )
