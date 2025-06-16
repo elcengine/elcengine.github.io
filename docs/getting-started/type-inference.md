@@ -21,3 +21,5 @@ That being said, manual type assertion is still a pain and we want to make it as
 - `ExecInt()` - Executes the query and returns the result as an `int`. This method is useful for queries that return a single integer value, such as count queries or schedule queries which return a cron entry ID.
 
 - `ExecSS()` - Executes the query and returns the result as a slice of strings. This method is useful for queries that return an array of strings, such as distinct queries.
+
+- `ExecInto()` - Executes the query and unmarshals the result into the provided result variable. It is useful when you want to extract results into a custom struct other than the model type such as when you populate certain fields.

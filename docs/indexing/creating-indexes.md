@@ -9,7 +9,7 @@ Indexes can be defined within a Schema under the `Index` field. This field accep
 ```go
 schema := elemental.NewSchema(map[string]elemental.Field{
 	"Vitality": {
-		Type:     reflect.Int,
+		Type:     elemental.Int,
 		Required: true,
 		Index: options.Index().SetUnique(true),
 	},

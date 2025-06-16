@@ -16,26 +16,26 @@ A schema is a blueprint for your data model. It defines the structure of your da
 unique := true
 schema := elemental.NewSchema(map[string]elemental.Field{
 	"Name": {
-		Type:     reflect.String,
+		Type:     elemental.String,
 		Required: true,
-		Index: options.Index().SetUnique(true),
+		Index:    options.Index().SetUnique(true),
 	},
 	"Age": {
-		Type:    reflect.Int,
+		Type:    elemental.Int,
 		Default: DefaultAge,
 	},
 	"Occupation": {
-		Type: reflect.String,
+		Type: elemental.String,
 	},
 	"School": {
-		Type: reflect.String,
+		Type: elemental.String,
 	},
 	"Weapons": {
-		Type:    reflect.Slice,
+		Type:    elemental.Slice,
 		Default: []string{},
 	},
 	"Retired": {
-		Type:    reflect.Bool,
+		Type:    elemental.Bool,
 		Default: false,
 	},
 }, elemental.SchemaOptions{
@@ -47,7 +47,7 @@ schema := elemental.NewSchema(map[string]elemental.Field{
 
 Each field in a schema is defined by a `Field` struct. The `Field` struct has the following properties:
 
-- **Type**: The data type of the field. This can be any of the types supported by the `reflect` package.
+- **Type**:  The data type of the field. Can be of reflect.Kind, reflect.Type, an Elemental alias such as elemental.String or a custom reflection
 
 - **Required**: A boolean value that indicates whether the field is required or not.
 
@@ -59,9 +59,9 @@ Each field in a schema is defined by a `Field` struct. The `Field` struct has th
 
 - **Length**: The length of the field.
 
-- **Regex**: A regular expression pattern that the field must match.
+- **Regex**: A regular expression (*regexp.Regexp) that the field must match.
 
-- **Index**: An `IndexOptions` struct that defines the indexing options for the field.
+- **Index**: A pointer to an `IndexOptions` struct that defines the indexing options for the field.
 
 - **IndexOrder**: The order in which the field should be indexed.
 

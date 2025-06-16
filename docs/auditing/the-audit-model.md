@@ -9,18 +9,18 @@ The Audit model is a special model that is used to log changes to other models. 
 ```go
 var AuditModel = NewModel[Audit]("Audit", NewSchema(map[string]Field{
 	"Entity": {
-		Type:     reflect.String,
+		Type:     elemental.String,
 		Required: true,
 	},
 	"Type": {
-		Type: reflect.String,
+		Type: elemental.String,
 	},
 	"Document": {
-		Type:     reflect.Map,
+		Type:     elemental.Map,
 		Required: true,
 	},
 	"User": {
-		Type: reflect.String,
+		Type: elemental.String,
 	},
 }, SchemaOptions{
 	Collection: "audits",
